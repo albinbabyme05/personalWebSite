@@ -1,45 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="scroll-behavior: smooth;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AlbinBaby</title>
     <link rel="icon" href="https://media.licdn.com/dms/image/D4E35AQFzoBWmKR0jIg/profile-framedphoto-shrink_200_200/0/1712779831432?e=1722088800&v=beta&t=Ia6r7nxlp1bcD2sf9E5uUOBSyMX09E6yNHbklYLpgyg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMiOVGz/Kz6aOFTU+YIQjD2l7zX0MkzJ5P7p1rm" crossorigin="anonymous">
+    <style>
+        body {
+            padding-top: 70px; /* To avoid content going behind the fixed header */
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+        }
+        .rounded-circle {
+            width: 100%;
+            height: auto;
+            max-width: 300px; /* Optional: limit max width */
+            display: block;
+            margin: 0 auto; /* Center the image */
+        }
+    </style>
 </head>
 <body>
-<header class="bg-info">
-    <div class="row text-white">
-        <div class="col-md-9 p-3">
-            <h2>Albin Baby</h2>
+<header class="bg-info navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid text-white">
+        <div class="navbar-header">
+            <a class="navbar-brand text-white" href="#">Albin Baby</a>
         </div>
-        <div class="col-md-3 my-auto ms-auto">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav ms-auto">
-                    <li class="nav-item active">
-                      <a class="nav-link text-white" href="#">Home<span class="sr-only"></span></a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link text-white" href="#">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Experience</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Contact me</a>
-                    </li>
-                  </ul>
-                </div>
-              </nav>
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item active">
+                    <a class="nav-link text-white" href="#home">Home<span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#services">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#experience">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#contact">Contact me</a>
+                </li>
+            </ul>
         </div>
     </div>
 </header>
 
-<section class="p-4">
+<section id="home" class="p-5">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-6">
@@ -57,15 +72,13 @@
     </div>
 </section>
 
-<section class="bg-light p-120">
+<section id="services" class="bg-light p-5">
     <div class="container">
         <h1 class="text-center">Services</h1>
         <div class="row">
             <div class="col-md-4 mb-4">
                 <div class="card text-center p-3" style="width: 100%;">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-laptop text-center" viewBox="0 0 16 16">
-                        <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5"/>
-                    </svg>
+                    <i class="fas fa-laptop-code fa-3x mb-3"></i>
                     <div class="card-body">
                         <h5 class="card-title">Software Developer</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -74,9 +87,7 @@
             </div>
             <div class="col-md-4 mb-4">
                 <div class="card text-center p-3" style="width: 100%;">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-laptop text-center" viewBox="0 0 16 16">
-                        <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5"/>
-                    </svg>
+                    <i class="fas fa-layer-group fa-3x mb-3"></i>
                     <div class="card-body">
                         <h5 class="card-title">Full Stack Developer</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -85,11 +96,9 @@
             </div>
             <div class="col-md-4 mb-4">
                 <div class="card text-center p-3" style="width: 100%;">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-laptop text-center" viewBox="0 0 16 16">
-                        <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5"/>
-                    </svg>
+                    <i class="fas fa-database fa-3x mb-3"></i>
                     <div class="card-body">
-                        <h5 class="card-title">Full Stack Developer</h5>
+                        <h5 class="card-title">Database Administrator</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     </div>
                 </div>
@@ -98,9 +107,7 @@
         <div class="row">
             <div class="col-md-4 mb-4">
                 <div class="card text-center p-3" style="width: 100%;">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-laptop text-center" viewBox="0 0 16 16">
-                        <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5"/>
-                    </svg>
+                    <i class="fas fa-code fa-3x mb-3"></i>
                     <div class="card-body">
                         <h5 class="card-title">Front End Developer</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -109,9 +116,7 @@
             </div>
             <div class="col-md-4 mb-4">
                 <div class="card text-center p-3" style="width: 100%;">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-laptop text-center" viewBox="0 0 16 16">
-                        <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5"/>
-                    </svg>
+                    <i class="fas fa-server fa-3x mb-3"></i>
                     <div class="card-body">
                         <h5 class="card-title">Back End Developer</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -120,9 +125,7 @@
             </div>
             <div class="col-md-4 mb-4">
                 <div class="card text-center p-3" style="width: 100%;">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-laptop text-center" viewBox="0 0 16 16">
-                        <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5"/>
-                    </svg>
+                    <i class="fas fa-chart-line fa-3x mb-3"></i>
                     <div class="card-body">
                         <h5 class="card-title">Data Scientist</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -133,13 +136,13 @@
     </div>
 </section>
 
-<section class="bg-white p-5">
+<section id="experience" class="bg-white p-5">
     <div class="container">
         <h2 class="text-center">Experience</h2>
         <div class="row">
             <div class="col-md-4 mb-4">
                 <div class="card text-center p-3" style="width: 100%;">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTagnEFdm3RbOfNvObFBFarNQlUWteqaxIQfA&s" alt="">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTagnEFdm3RbOfNvObFBFarNQlUWteqaxIQfA&s" alt="" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">Intern Student</h5>
                         <p class="card-text">Front End Tool Developed for Bosch Internal Portal used HTML, CSS, JavaScript.</p>
@@ -148,19 +151,19 @@
             </div>
             <div class="col-md-4 mb-4">
                 <div class="card text-center p-3" style="width: 100%;">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTagnEFdm3RbOfNvObFBFarNQlUWteqaxIQfA&s" alt="">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTagnEFdm3RbOfNvObFBFarNQlUWteqaxIQfA&s" alt="" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">Work student</h5>
-                        <p class="card-text">Python Automation such as KPI and Jira.Used Python, REST API, Excel.</p>
+                        <p class="card-text">Python Automation such as KPI and Jira. Used Python, REST API, Excel.</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4 mb-4">
                 <div class="card text-center p-3" style="width: 100%;">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTagnEFdm3RbOfNvObFBFarNQlUWteqaxIQfA&s" alt="">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTagnEFdm3RbOfNvObFBFarNQlUWteqaxIQfA&s" alt="" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">Work Student</h5>
-                        <p class="card-text"> Software Development for webapp development and Tool Automation. </p>
+                        <p class="card-text">Software Development for web app development and Tool Automation.</p>
                     </div>
                 </div>
             </div>
@@ -168,7 +171,7 @@
         <div class="row">
             <div class="col-md-4 mb-4">
                 <div class="card text-center p-3" style="width: 100%;">
-                    <img src="data:image/png;base64,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" alt="">
+                    <img src="data:image/png;base64,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" alt="" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">Master Thesis</h5>
                         <p class="card-text">Photogrammetry based model development for edge Detection using AI.</p>
@@ -177,62 +180,59 @@
             </div>
             <div class="col-md-4 mb-4">
                 <div class="card text-center p-3" style="width: 100%;">
-                    <img src="https://5g.nrw/app/uploads/2020/04/Fraunhofer_ISOB-INA.jpg" alt="">
+                    <img src="https://5g.nrw/app/uploads/2020/04/Fraunhofer_ISOB-INA.jpg" alt="" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">Work student</h5>
-                        <p class="card-text">Backend Tool developemnt and configuration XAI Tool Box using Backend tools.</p>
+                        <p class="card-text">Backend Tool development and configuration XAI Tool Box using Backend tools.</p>
                     </div>
                 </div>
             </div>
-            
         </div>
     </div>
-</section class="p-10 bg-light">
+</section>
+
+<section id="contact" class="p-10 bg-light">
     <div class="container">
         <div class="col-md-12">
             <form>
                 <div class="form-row">
-                    
-                <div class="form-group col-md-6">
-                    <label for="validationDefault01">First name</label>
-                    <input type="text" class="form-control" id="inputFirstName" placeholder="First name" >
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="validationDefault02">Last name</label>
-                    <input type="text" class="form-control" id="inputLastName" placeholder="Last name" >
-                </div>
-                
+                    <div class="form-group col-md-6">
+                        <label for="validationDefault01">First name</label>
+                        <input type="text" class="form-control" id="inputFirstName" placeholder="First name" >
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="validationDefault02">Last name</label>
+                        <input type="text" class="form-control" id="inputLastName" placeholder="Last name" >
+                    </div>
                 </div>
                 <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="validationDefault03">Email</label>
-                    <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="validationDefault04">Mobile Number</label>
-                    <input type="tel" class="form-control" id="inputmobileNum" placeholder="Number" required>
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="validationDefault05">Message</label>
-                    <textarea class="form-control" cols="50" rows="3" placeholder="Type your message Here..."></textarea>
-                </div>
+                    <div class="form-group col-md-6">
+                        <label for="validationDefault03">Email</label>
+                        <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="validationDefault04">Mobile Number</label>
+                        <input type="tel" class="form-control" id="inputmobileNum" placeholder="Number" required>
+                    </div>
+                    <div class="form-group col-md-12">
+                        <label for="validationDefault05">Message</label>
+                        <textarea class="form-control" cols="50" rows="3" placeholder="Type your message Here..."></textarea>
+                    </div>
                 </div>
                 <div class="form-group">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
-                    <label class="form-check-label" for="invalidCheck2">
-                    Agree to terms and conditions
-                    </label>
-                </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                        <label class="form-check-label" for="invalidCheck2">
+                            Agree to terms and conditions
+                        </label>
+                    </div>
                 </div>
                 <button class="btn btn-primary" type="submit">Submit</button>
             </form>
         </div>  
     </div>
-        
-<Section>
+</section>
 
-</Section>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
